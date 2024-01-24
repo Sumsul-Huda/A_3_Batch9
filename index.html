@@ -1,24 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- head section -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>this is my assignmint-3</title>
-    <!-- link  -->
+    <!-- link  tailwind.config.js  -->
+    <link rel="stylesheet" href="tailwind.config.js">
     <!-- tailwind and daisyui link -->
-    link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- google font link -->
-    <!-- creating my own  styles -->
+    <!-- Manrope google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- creating my own  styles by usig tailwind script -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#FF4240;',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- normal css custom styles -->
     <style>
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+        }
 
+        .font-gray {
+            color: #ffffff99;
+        }
     </style>
 </head>
+<!-- body section -->
 
-<body>
-    <header>
+<body class=" container font-manrope mx-auto ">
+    <!-- header banner section -->
+    <header class=" ">
+        <!-- navbar start -->
+        <div class=" ">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 
+                            <li>
+                                <ul class="p-2">
+                                    <li><a class="text-xl font-normal">Submenu 1</a></li>
+                                    <li><a class="text-xl font-normal">Submenu 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class=" text-4xl text-[#131318] font-extrabold flex">Hockey
+                        <span class="text-primary-color"> ’ </span>
+                        s
+                    </a>
+                </div>
+                <div class="navbar-center hidden lg:flex lg:justify-around ">
+                    <ul class="menu menu-horizontal pr-16 text-xl font-bold text-[#424247] ">
+                        <li>
+                            <a class=" text-primary-color ">Home</a>
+                        </li>
+                        <li><a class="">About</a></li>
+                        <li><a class="">Pages</a></li>
+                        <li><a class="">Blog</a></li>
+                        <li><a class="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex justify-between items-center ">
+                        <div class="lg:p-10 hidden">
+                            <img class="" src="Images/Frame.svg" alt="">
+                        </div>
+                        <div>
+                            <button
+                                class="btn text-xl font-bold text-white bg-primary-color px-4 py-2 lg:px-6 lg:py-2 ">Get
+                                Ticket</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navbar end -->
+        <!-- bannar start -->
+        <div class="relative ">
+            <div class="carousel w-full lg:h-[600px] gap-2">
+                <!-- slider-1 -->
+                <div id="slide1" class="carousel-item relative w-full ">
+                    <img src="Images/1.png" class="w-full p-2" />
+                    <div
+                        class="absolute flex gap-4 transform -translate-y-1/2  lg:left-14 left-32 right-5 lg:bottom-[5%] -bottom-1">
+                        <a href="#slide4" class="btn btn-circle bg-[#131318] text-white">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-[#131318] text-white">❯</a>
+                    </div>
+                </div>
+                <!-- slider-2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="Images/2.png" alt="" class="w-full p-2">
+                    <div
+                        class="absolute flex gap-4 transform -translate-y-1/2  lg:left-14 left-32 right-5 lg:bottom-[5%] -bottom-1">
+                        <a href="#slide1" class="btn btn-circle bg-[#131318] text-white">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-[#131318] text-white">❯</a>
+                    </div>
+                </div>
+                <!-- slider-3 -->
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="Images/3.png" alt="" class="w-full p-2">
+                    <div
+                        class="absolute flex gap-4 transform -translate-y-1/2  lg:left-14 left-32 right-5 lg:bottom-[5%] -bottom-1">
+                        <a href="#slide2" class="btn btn-circle bg-[#131318] text-white">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-[#131318] text-white">❯</a>
+                    </div>
+                </div>
+                <!-- slider-4 -->
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="Images/2.png" class="w-full p-2" />
+                    <div
+                        class="absolute flex gap-4 transform -translate-y-1/2  lg:left-14 left-32 right-5 lg:bottom-[5%] -bottom-1">
+                        <a href="#slide3" class="btn btn-circle bg-[#131318] text-white">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-[#131318] text-white">❯</a>
+                    </div>
+                </div>
+            </div>
+            <!-- banner card  -->
+            <div class="lg:absolute lg:-right-72 lg:bottom-[5%] -bottom-1 p-2">
+                <div class="space-y-4 w-full lg:w-3/5 h-30 text-white bg-[#131318] rounded-xl p-8">
+                    <h2 class="text-2xl font-extrabold">
+                        Meet all the heroes from the field
+                    </h2>
+                    <p class="font-gray">
+                        Join the journey of inspiration, where you can connect with the heroes who resonate with your
+                        passions.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- bannar end -->
     </header>
     <!-- End header all items -->
     <main></main>
